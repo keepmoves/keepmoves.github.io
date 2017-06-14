@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 天道酬勤</title>
+  <title>windows下使用hexo+github搭建个人博客 | 天道酬勤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Keepmoves&apos;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天道酬勤">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="安装gitgit下载地址：https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgitgit安装教程：https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html 安装node.js在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。nod">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows下使用hexo+github搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2017/06/14/hexo-github/index.html">
 <meta property="og:site_name" content="天道酬勤">
-<meta property="og:description" content="Keepmoves&apos;s Blog">
+<meta property="og:description" content="安装gitgit下载地址：https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgitgit安装教程：https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html 安装node.js在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。nod">
+<meta property="og:updated_time" content="2017-06-14T15:01:36.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天道酬勤">
-<meta name="twitter:description" content="Keepmoves&apos;s Blog">
+<meta name="twitter:title" content="windows下使用hexo+github搭建个人博客">
+<meta name="twitter:description" content="安装gitgit下载地址：https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgitgit安装教程：https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html 安装node.js在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。nod">
   
     <link rel="alternative" href="/atom.xml" title="天道酬勤" type="application/atom+xml">
   
@@ -144,36 +146,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo-github" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/14/hexo-github/" class="archive-article-date">
-  	<time datetime="2017-06-14T13:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/14/hexo-github/">windows下使用hexo+github搭建个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      windows下使用hexo+github搭建个人博客
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/06/14/hexo-github/" class="archive-article-date">
+  	<time datetime="2017-06-14T13:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>安装git<br><br>git下载地址：<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit</a><br><br>git安装教程：<a href="https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html" target="_blank" rel="external">https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html</a></li>
+<li>安装node.js<br>在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。<br><br>node.js下载地址：<a href="http://nodejs.cn/download/" target="_blank" rel="external">http://nodejs.cn/download/</a><br><br>安装完成后打开cmd，输入命令确认是否安装成功。<br><br><code>node -v</code><br><br><code>npm -v</code><br><br>如果安装没有成功，百度一下。</li>
+<li>安装hexo<br><br>任意位置鼠标右键，点击git bash here.输入命令：<br><br><code>npm install -g hexo</code><br><br>在安装过程中的打印的日志里面，请记下安装的hexo的位置，然后再系统的环境变量PATH里面加多这个库的lib地址；要不然你会遇到hexo command not found.<br>我的电脑安装位置为：<br><br><code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo\bin</code>    </li>
+<li><p>本地搭建Blog<br></p>
+<ul>
+<li>a&nbsp;在任意位置创建文件夹（如C:\hexo），右键选择git bash here，执行命令：<br><br><code>hexo init</code><br><br>Hexo 即会在目标文件夹建立网站所需要的所有文件。</li>
+<li>b&nbsp;安装依赖包:<br><br><code>npm install</code><br></li>
+<li>c&nbsp;本地查看。现在已经在本地搭好hexo博客了，在C:\hexo(你创建的文件夹路径下)依次执行以下命令：<br><br><code>hexo generate</code><br><br><code>hexo sever</code><br><br>在浏览器输入即可查看本地博客：<br><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+</ul>
+</li>
+<li>将本地博客部署到github<ul>
+<li>a&nbsp;创建github帐号。不多描述。</li>
+<li>b&nbsp;创建repository。在自己Github主页右下角，创建一个 New repository。命名规则如下：<br><br>如果Github账号是keepmoves。<br>则创建的repository名字应该是keepmoves.github.io<br></li>
+</ul>
+</li>
+<li>部署<ul>
+<li>a&nbsp;编辑_config.yml(在C:\hexo\blog下)。<br>你在部署时，要把下面的keepmoves都换成你的账号名。<br><br>deploy: <br><br>&nbsp;&nbsp;type: git  <br><br>&nbsp;&nbsp;repo: <a href="https://github.com/keepmoves/keepmoves.github.io.git" target="_blank" rel="external">https://github.com/keepmoves/keepmoves.github.io.git</a><br><br>&nbsp;&nbsp;branch: master<br></li>
+<li>b&nbsp;执行命令。<br><br><code>hexo g #新版本支持的缩写，可以看最后面的tips了解情况</code><br><br><code>hexo d</code><br></li>
+<li>c&nbsp;SSH key。<br>有些新用户需要设置 ssh，否则上述命令会失败。<br><ul>
+<li>1设置Git的user.name和user.email<br><br>在第一次使用Git时，你需要告诉你的协同开发者，你是谁以及你的邮箱，在你提交的时候，Git需要这两个信息。具体通过以下命令设置：<br><br><code>git config --global user.name xxx</code><br><br><code>git config --global user.email xxx@163.com</code><br></li>
+<li>2生成SSH密钥<br><br><code>ssh-keygen -t rsa -C xxx@163.com(邮箱地址)      // 生成ssh 按3个回车，密码为空。</code><br></li>
+<li>3添加到github<br>找到.ssh文件夹打开（C:\Users\Administrator.ssh），打开cat id_rsa.pub，复制。然后登陆github，settings － SSH keys  － add ssh keys（把上面的复制的内容全部添加进去即可）。</li>
+<li>3重新部署<br><br><code>hexo g</code><br><br><code>hexo d</code><br><br>注：<br><br>备注：如果执行上述命令报错，你可以试试下面这个命令再试。<br><code>npm install hexo-deployer-git--save</code><br>部署成功后，你在浏览器中输入<a href="keepmoves.github.io">keepmoves.github.io</a>，就能看到和本地一样的效果了。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,46 +235,89 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/14/hexo-github/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/13/第一篇博客/" class="archive-article-date">
-  	<time datetime="2017-06-12T16:13:04.119Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/13/第一篇博客/">Hexo+Github下的第一个博客</a>
-    </h1>
+  
+    <a href="/2017/06/13/第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo+Github下的第一个博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -247,8 +340,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
