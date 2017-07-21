@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>天道酬勤</title>
+  <title>cpp文件读写 | 天道酬勤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello">
+  <meta name="description" content="c++读文件c++读文件使用ifstream类实例化一个对象，然后ifstream类中重载的&amp;gt;&amp;gt;操作符将硬盘上的文本文件读取到内存中，进行操作。需要注意的是，使用ifstream打开一个文件进行读操作时，如果该文件不存在，不会创建新的文件，其默认的文件打开方式为ios::in。12345678910111213141516171819202122232425262728#include">
+<meta name="keywords" content="cpp 文件读写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="天道酬勤">
+<meta property="og:title" content="cpp文件读写">
 <meta property="og:url" content="http://yoursite.com/2017/07/21/cpp文件读写/index.html">
 <meta property="og:site_name" content="天道酬勤">
-<meta property="og:description" content="hello">
-<meta property="og:updated_time" content="2017-07-21T15:17:34.802Z">
+<meta property="og:description" content="c++读文件c++读文件使用ifstream类实例化一个对象，然后ifstream类中重载的&amp;gt;&amp;gt;操作符将硬盘上的文本文件读取到内存中，进行操作。需要注意的是，使用ifstream打开一个文件进行读操作时，如果该文件不存在，不会创建新的文件，其默认的文件打开方式为ios::in。12345678910111213141516171819202122232425262728#include">
+<meta property="og:updated_time" content="2017-07-21T15:24:29.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天道酬勤">
-<meta name="twitter:description" content="hello">
+<meta name="twitter:title" content="cpp文件读写">
+<meta name="twitter:description" content="c++读文件c++读文件使用ifstream类实例化一个对象，然后ifstream类中重载的&amp;gt;&amp;gt;操作符将硬盘上的文本文件读取到内存中，进行操作。需要注意的是，使用ifstream打开一个文件进行读操作时，如果该文件不存在，不会创建新的文件，其默认的文件打开方式为ios::in。12345678910111213141516171819202122232425262728#include">
   
     <link rel="alternative" href="/atom.xml" title="天道酬勤" type="application/atom+xml">
   
@@ -166,9 +167,28 @@
             <article id="post-cpp文件读写" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cpp文件读写
+    </h1>
+  
+
+        
+        <a href="/2017/07/21/cpp文件读写/" class="archive-article-date">
+  	<time datetime="2017-07-21T10:42:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hello</p>
+        <h1 id="c-读文件"><a href="#c-读文件" class="headerlink" title="c++读文件"></a>c++读文件</h1><p>c++读文件使用ifstream类实例化一个对象，然后ifstream类中重载的&gt;&gt;操作符将硬盘上的文本文件读取到内存中，进行操作。需要注意的是，使用ifstream打开一个文件进行读操作时，如果该文件不存在，不会创建新的文件，其默认的文件打开方式为ios::in。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;fstream&gt;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    ifstream readFile(&quot;c://test.txt&quot;);</div><div class="line">    //下面这种方法同样可以打开文件进行读操作</div><div class="line">    //ifstream readFile;</div><div class="line">    //readFile.open(&quot;c://test.txt&quot;);</div><div class="line">    //如果文件没有打开，返回一个return</div><div class="line">    if(!readFile)</div><div class="line">    &#123;</div><div class="line">        cout &lt;&lt; &quot;Open error!&quot; &lt;&lt;endl;</div><div class="line">        return 1;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    char readBuf[128];</div><div class="line">    while(!readFile.eof())</div><div class="line">    &#123;</div><div class="line">        memset(readBuf, 0, sizeof(readBuf));</div><div class="line">        readFile.getline(readBuf,128);</div><div class="line">        cout &lt;&lt; readBuf &lt;&lt; endl;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    readFile.close();</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">对文件进行读操作后记得调用close函数关闭打开的文件。</div></pre></td></tr></table></figure></p>
+<h1 id="c-写文件"><a href="#c-写文件" class="headerlink" title="c++写文件"></a>c++写文件</h1><p>c++读文件使用ofstream类实例化一个对象，然后ofstream类中重载的&lt;&lt;操作符将程序中的变量写入存储在硬盘上的文件中，进行保存、Log等操作。需要注意的是，使用ofstream打开一个文件进行读操作时，如果该文件不存在，会创建新的文件，其默认的文件打开方式为ios::out。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;fstream&gt;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    ofstream writeFile(&quot;c://test.txt&quot;);</div><div class="line">    //下面这种方法同样可以打开文件进行写操作</div><div class="line">    //ofstream writeFile;</div><div class="line">    //readFile.open(&quot;c://test.txt&quot;);</div><div class="line">    //如果文件没有打开，返回一个return</div><div class="line">    if(!writeFile)</div><div class="line">    &#123;</div><div class="line">        cout &lt;&lt; &quot;Open error!&quot; &lt;&lt;endl;</div><div class="line">        return 1;</div><div class="line">    &#125;</div><div class="line">    for(int i = 0; i &lt; 10; ++i)</div><div class="line">    &#123;</div><div class="line">        writeFile &lt;&lt; i &lt;&lt; endl;</div><div class="line">    &#125;</div><div class="line">    writeFile.close();</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>同样，对文件进行写操作后记得调用close函数关闭打开的文件。</p>
+<h1 id="c-读写文件"><a href="#c-读写文件" class="headerlink" title="c++读写文件"></a>c++读写文件</h1><p>对文件读和写的操作，也可以使用fstream类的实例化对象实现，只需要在第二个参数设定文件打开的方式即可进行读操作、写操作、读写操作。文件的读写方式有以下几种：<br>|:——–:|:———:|:——-:|<br>|ios::in|打开文件进行读操作，文件不存在不会创建新文件|<br>|ios::out|打开文件进行写操作，文件不存在则会创建新文件，存在则清空其内容。|<br>|ios::app|供写，文件不存在则创建，若文件已存在则在原文件内容后写入新的内容|<br>|ios::ate|文件打开时，文件指针在最后，与ios::in或ios::out结合使用|<br>|ios::trunc|读写文件前将文件清空，将文件内容清空。|<br>|ios::binary|以二进制的形式读写文件|<br>|ios::nocreate|文件不存在不会创建新文件，文件不存在则打开失败|<br>|ios::noreplace|不覆盖新文件，文件若存在则打开失败|<br>ofstream以及ifstream对象同样可以设定以上参数。并且可以通过“或”运算设置两个及以上的打开方式。<br>第三个参数表示的是打开文件的属性：<br>|0|普通文件|<br>|1|只读文件|<br>|2|隐藏文件|<br>|3|系统文件|<br>使用fstream实例化的对象可以对一个文件进行读和写的操作。不过因为不管读或者写操作后，文件指针都指向文件最后面，所以要读文件时，需要指定文件指针的位置。C++的文件定位分为读位置和写位置的定位，对应的成员函数是seekg()和seekp()。seekg()是设置读位置，seekp()是设置写位置。它们最通用的形式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">　　　　istream &amp;seekg(streamoff offset,seek_dir origin); </div><div class="line">　　　　ostream &amp;seekp(streamoff offset,seek_dir origin);</div></pre></td></tr></table></figure></p>
+<p>streamoff定义于 iostream.h 中，定义有偏移量 offset 所能取得的最大值，seek_dir 表示移动的基准位置，是一个有以下值的枚举：<br>|ios::beg|文件开始位置|<br>|ios::cur|文件当前位置|<br>|ios::end|文件末尾|<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;fstream&gt;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	using namespace std;</div><div class="line">    //同时使用ios::in和ios::out文件不存在时无法创建新文件，需加上ios::app才行。</div><div class="line">	fstream readWriteFile(&quot;c://test4.txt&quot;, ios::in | ios::out);</div><div class="line">	if (!readWriteFile)</div><div class="line">	&#123;</div><div class="line">	    cout &lt;&lt; &quot;Open error!&quot; &lt;&lt; endl;</div><div class="line">	    return 1;</div><div class="line">	&#125;</div><div class="line">	for (int i = 0; i &lt; 10; ++i)</div><div class="line">	&#123;</div><div class="line">		readWriteFile &lt;&lt; i &lt;&lt; endl;</div><div class="line">	&#125;</div><div class="line">	readWriteFile.seekg(0，ios::beg);</div><div class="line">	char readBuf[128];</div><div class="line">	while (!readWriteFile.eof())</div><div class="line">	&#123;</div><div class="line">		memset(readBuf, 0, 128);</div><div class="line">		readWriteFile.getline(readBuf, 128);</div><div class="line">		cout &lt;&lt; readBuf &lt;&lt; endl;</div><div class="line">	&#125;</div><div class="line">	readWriteFile.close();</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -198,7 +218,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">cpp 文件读写</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/cpp/" class="article-tag-list-link color4">cpp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -369,6 +411,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">cpp 文件读写</a>
               </li>
             
             <div class="clearfix"></div>
