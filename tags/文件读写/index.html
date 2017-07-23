@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>天道酬勤</title>
+  <title>Tag: 文件读写 | 天道酬勤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Keepmoves&apos;s Blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="天道酬勤">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/文件读写/index.html">
 <meta property="og:site_name" content="天道酬勤">
 <meta property="og:description" content="Keepmoves&apos;s Blog">
 <meta name="twitter:card" content="summary">
@@ -164,37 +164,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-cpp文件读写" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/21/cpp文件读写/" class="archive-article-date">
+  	<time datetime="2017-07-21T10:42:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/21/cpp文件读写/">c++文件读写</a>
+      <a class="archive-article-title" href="/2017/07/21/cpp文件读写/">c++文件读写</a>
     </h1>
   
 
-        
-        <a href="/2017/07/21/cpp文件读写/" class="archive-article-date">
-  	<time datetime="2017-07-21T10:42:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="c-读文件"><a href="#c-读文件" class="headerlink" title="c++读文件"></a>c++读文件</h1><p>c++读文件使用ifstream类实例化一个对象，然后ifstream类中重载的&gt;&gt;操作符将硬盘上的文本文件读取到内存中，进行操作。需要注意的是，使用ifstream打开一个文件进行读操作时，如果该文件不存在，不会创建新的文件，其默认的文件打开方式为ios::in。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;fstream&gt;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    ifstream readFile(&quot;c://test.txt&quot;);</div><div class="line">    //下面这种方法同样可以打开文件进行读操作</div><div class="line">    //ifstream readFile;</div><div class="line">    //readFile.open(&quot;c://test.txt&quot;);</div><div class="line">    //如果文件没有打开，return</div><div class="line">    if(!readFile)</div><div class="line">    &#123;</div><div class="line">        cout &lt;&lt; &quot;Open error!&quot; &lt;&lt;endl;</div><div class="line">        return 1;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    char readBuf[128];</div><div class="line">    while(!readFile.eof())</div><div class="line">    &#123;</div><div class="line">        memset(readBuf, 0, sizeof(readBuf));</div><div class="line">        readFile.getline(readBuf,128);</div><div class="line">        cout &lt;&lt; readBuf &lt;&lt; endl;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    readFile.close();</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/07/21/cpp文件读写/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,7 +207,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -223,168 +220,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/21/cpp文件读写/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
   
-    <article id="post-hexo-github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/14/hexo-github/">windows下使用hexo+github搭建个人博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/14/hexo-github/" class="archive-article-date">
-  	<time datetime="2017-06-14T13:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1. 安装git"></a>1. 安装git</h2><p>git下载地址：<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit</a><br>git安装教程：<a href="https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html" target="_blank" rel="external">https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html</a></p>
-<h2 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h2><p>在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。<br>node.js下载地址：<a href="http://nodejs.cn/download/" target="_blank" rel="external">http://nodejs.cn/download/</a><br>安装完成后打开cmd，输入命令确认是否安装成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
-<p>如果安装没有成功，百度一下。<br>
-        
-          <a class="article-more-a" href="/2017/06/14/hexo-github/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/course/" class="article-tag-list-link color2">course</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/14/hexo-github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/13/第一篇博客/">Hexo+Github下的第一个博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/13/第一篇博客/" class="archive-article-date">
-  	<time datetime="2017-06-13T13:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://7xqkiu.com1.z0.glb.clouddn.com/Blog_image/1.jpg" alt=""><br><br>忙活了一晚上，终于使用Hexo+github搭建好了自己的博客。<br><br>搭建过程中，发现许多的教程都不太完整。等明天根据自己遇到的一些问题，<br><br>综合多个教程写一个比较详细的教程吧，这样下次搭建也方便一点。<br><br>不早了，睡觉了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/other/" class="article-tag-list-link color1">other</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/13/第一篇博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -406,10 +252,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
